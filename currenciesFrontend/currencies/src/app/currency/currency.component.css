@@ -1,0 +1,119 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"); */
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px 40px;
+  background: linear-gradient(145deg, #f0f3f7, #d9dde3);
+  border-radius: 16px;
+  box-shadow: 8px 8px 15px #bec3ca, -8px -8px 15px #ffffff;
+  font-family: "Montserrat", sans-serif;
+  color: #2e3440;
+  user-select: none;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.controls label {
+  font-weight: 600;
+  font-size: 1.1rem;
+  min-width: 130px;
+  color: #4a5568;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.date-picker {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow: inset 4px 4px 8px #c1c6d0, inset -4px -4px 8px #ffffff;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  width: 180px;
+}
+
+.date-picker:hover,
+.date-picker:focus {
+  box-shadow: inset 2px 2px 6px #a2a7b2, inset -2px -2px 6px #f5f8ff;
+  outline: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #5a67d8, #434190);
+  border: none;
+  color: white;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(67, 65, 144, 0.4);
+  cursor: pointer;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+  font-size: 1.1rem;
+  letter-spacing: 0.03em;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #434190, #5a67d8);
+  box-shadow: 0 12px 20px rgba(67, 65, 144, 0.6);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 6px 6px 15px #bec3ca, -6px -6px 15px #ffffff;
+  background: white;
+}
+
+.rates-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 1rem;
+  min-width: 650px;
+}
+
+.rates-table thead tr {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.rates-table th,
+.rates-table td {
+  padding: 15px 25px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.rates-table tbody tr.table-row {
+  transition: background-color 0.25s ease;
+  cursor: default;
+}
+
+.rates-table tbody tr.table-row:hover {
+  background-color: #f0f3ff;
+}
+
+.rates-table tbody tr.table-row:nth-child(even) {
+  background-color: #fafbff;
+}
+
+.no-data {
+  font-size: 1.2rem;
+  color: #718096;
+  text-align: center;
+  margin-top: 50px;
+  font-style: italic;
+  letter-spacing: 0.03em;
+  user-select: none;
+}

@@ -1,0 +1,34 @@
+# Node modules (Angular dependencies)
+node_modules/
+
+# Angular build output
+dist/
+out-tsc/
+tmp/
+temp/
+
+# Environment files (optional, if you want to ignore)
+src/environments/*.env
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE/editor folders
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python cache and environments
+__pycache__/
+*.py[c]()*

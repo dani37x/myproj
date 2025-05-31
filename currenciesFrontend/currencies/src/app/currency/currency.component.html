@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="controls">
+    <label for="date">Wybierz datę:</label>
+    <input
+      type="date"
+      id="date"
+      [(ngModel)]="selectedDate"
+      (change)="onDateChange()"
+      class="date-picker"
+    />
+    <button (click)="loadAllRates()" class="btn-primary">
+      Pokaż wszystkie kursy
+    </button>
+  </div>
+
+  <div *ngIf="filteredRates.length; else noDataBlock" class="table-wrapper">
+    <table class="rates-table">
+      <thead>
+        <tr>
+          <th>Waluta</th>
+          <th>Kod</th>
+          <th>Kurs</th>
+          <th>Data</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let rate of filteredRates" class="table-row">
+          <td>{{ rate.currency }}</td>
+          <td>{{ rate.code }}</td>
+          <td>{{ rate.rate | number : "1.4-4" }}</td>
+          <td>{{ rate.effective_date | date : "yyyy-MM-dd" }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <ng-template #noDataBlock>
+    <p class="no-data">Brak danych do wyświetlenia.</p>
+  </ng-template>
+</div>
