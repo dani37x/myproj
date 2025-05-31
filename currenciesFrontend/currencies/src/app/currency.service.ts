@@ -20,22 +20,21 @@ export class CurrencyService {
   constructor(private http: HttpClient) { }
 
 
-  // GET /currencies
+
   getCurrencyCodes(): Observable<any> {
     return this.http.get(`${this.API_URL}/currencies`);
   }
 
-  // GET /currencies/{date}
   getCurrenciesByDate(date: string): Observable<any> {
     return this.http.get(`${this.API_URL}/currencies/${date}`);
   }
 
-  // POST /currencies/fetch
+
   fetchAndStore(): Observable<any> {
     return this.http.post(`${this.API_URL}/currencies/fetch`, {});
   }
 
-  // ✅ Corrected endpoint: GET /currencies/db
+
   getAllFromDb(): Observable<any> {
     return this.http.get(`${this.API_URL}/currenciess/db`);
   }

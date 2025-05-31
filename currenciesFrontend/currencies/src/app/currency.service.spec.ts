@@ -17,7 +17,7 @@ describe('CurrencyService', () => {
   });
 
   afterEach(() => {
-    httpMock.verify(); // Sprawdza, czy nie zostały żadne nieobsłużone requesty
+    httpMock.verify();
   });
 
   it('should be created', () => {
